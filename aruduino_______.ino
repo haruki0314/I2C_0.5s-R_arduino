@@ -23,11 +23,11 @@ void loop() {
 
 /*setupの後、終了するまで繰り返し呼び出される関数です*/
 void ReceiveMassage(int n){
-  char cmd = Wire.read();     //文字を読む
+  int cmd = Wire.read();     //文字を読む
   Serial.println(cmd);       //シリアルポートにcmdを出力し表示する
 }
 
 //リクエスト要求を受けたときに「A」を送信する。
 void RequestMassage(){
-  Wire.write("A");            //Aを送信
+  Wire.write("120");            //Aを送信
 }
